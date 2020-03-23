@@ -12,20 +12,26 @@ public class Account {
 private String accountStatus;
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
-private String accountId;
+private int accountId;
+private String email;
 private String password;
 
 @OneToOne(mappedBy = "account")
 private Person person;
 
 
-public Account(String accountStatus, String accountId, String password,Person person) {
+public Account(String accountStatus,String email, String password) {
 	super();
 	this.accountStatus = accountStatus;
-	this.accountId = accountId;
-	//this.person = person;
+	this.email = email;
 	this.password = password;
 	
+}
+public String getEmail() {
+	return email;
+}
+public void setEmail(String email) {
+	this.email = email;
 }
 //public Person getPerson() {
 //	return person;
@@ -39,10 +45,10 @@ public String getAccountStatus() {
 public void setAccountStatus(String accountStatus) {
 	this.accountStatus = accountStatus;
 }
-public String getAccountId() {
+public int getAccountId() {
 	return accountId;
 }
-public void setAccountId(String accountId) {
+public void setAccountId(int accountId) {
 	this.accountId = accountId;
 }
 public String getPassword() {

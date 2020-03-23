@@ -20,14 +20,13 @@ private String name;
 @OneToOne(cascade = CascadeType.ALL)
 @JoinColumn(name="Account_fk", referencedColumnName = "accountId")
 private Account account;
-private String email;
+//private String email;
 
 
-public Person(int pId, String name, String email) {
+public Person(String name2) {
 	super();
-	this.pId = pId;
-	this.name = name;
-	this.email = email;
+	this.name = name2;
+	//this.email = email;
 }
 public int getpId() {
 	return pId;
@@ -49,10 +48,10 @@ public Account getAccount() {
 public void setAccount(Account account) {
 	this.account = account;
 }
-public String getEmail() {
-	return email;
-}
-public void setEmail(String email) {
-	this.email = email;
-}
+//public String getEmail() {
+//	return email;
+//}
+//public void setEmail(String email) {
+//	this.email = email;
+//}
 }

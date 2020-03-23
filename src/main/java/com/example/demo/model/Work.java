@@ -22,20 +22,18 @@ private String startDate;
 @JoinColumn(name="profile_id")
 private profile profile;
 private String endDate;
-public Work(int workid, String title, String company, String startDate, String endDate) {
+
+
+public Work(String title, String company, String startDate, String endDate) {
 	super();
-	this.workid = workid;
 	this.title = title;
 	Company = company;
 	this.startDate = startDate;
 	this.endDate = endDate;
 }
-public int getWorkid() {
-	return workid;
-}
-public void setWorkid(int workid) {
-	this.workid = workid;
-}
+
+
+
 public String getTitle() {
 	return title;
 }

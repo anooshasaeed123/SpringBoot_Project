@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/signup" method = "post">
+<form action="/newsignup" method = "post">
 Enter your full Name: <input type="text" name ="name"><br>
 Email: <input type="email" name ="email"><br>
 password: <input type="password" name = "password1"><br>

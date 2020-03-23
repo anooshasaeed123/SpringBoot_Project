@@ -21,20 +21,14 @@ private profile profile;
 private String Degree;
 private String endDate;
 private String startDate;
-public Education(int eid, String school, String degree, String endDate, String startDate) {
+public Education(String school, String degree, String endDate, String startDate) {
 	super();
-	Eid = eid;
 	School = school;
 	Degree = degree;
 	this.endDate = endDate;
 	this.startDate = startDate;
 }
-public int getEid() {
-	return Eid;
-}
-public void setEid(int eid) {
-	Eid = eid;
-}
+
 public String getSchool() {
 	return School;
 }

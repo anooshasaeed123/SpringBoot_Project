@@ -18,11 +18,21 @@ private String DateofMembership;
 @JoinColumn(name="Profile_fk", referencedColumnName = "pid")
 private profile profile;
 
-public Member(int memberid, String dateofMembership, com.example.demo.model.profile profile) {
+@OneToOne(cascade = CascadeType.ALL)
+@JoinColumn(name="person_fk", referencedColumnName = "pId")
+private Person person;
+
+public Member(String dateofMembership) {
 	super();
-	this.memberid = memberid;
 	DateofMembership = dateofMembership;
-	this.profile = profile;
+}
+
+public Person getPerson() {
+	return person;
+}
+
+public void setPerson(Person person) {
+	this.person = person;
 }
 
 public int getMemberid() {
