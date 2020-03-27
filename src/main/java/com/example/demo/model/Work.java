@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import java.sql.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+
+import com.ibm.icu.text.SimpleDateFormat;
 
 @Entity
 public class Work {
@@ -21,18 +25,30 @@ private String startDate;
 @ManyToOne
 @JoinColumn(name="profile_id")
 private profile profile;
-private String endDate;
 
+private String endDate;
+public Work(){
+	   super();
+	}
 
 public Work(String title, String company, String startDate, String endDate) {
 	super();
 	this.title = title;
 	Company = company;
+
 	this.startDate = startDate;
-	this.endDate = endDate;
+	this.endDate =  endDate;
+}
+
+public profile getProfile() {
+	return profile;
 }
 
 
+
+public void setProfile(profile profile) {
+	this.profile = profile;
+}
 
 public String getTitle() {
 	return title;

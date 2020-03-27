@@ -9,7 +9,7 @@
 <body>
 <h2>Edit Profile</h2>
 <H3>Work</H3>
-<form action="">
+<form action="submitwork" method = "post">
 Title: <input type="text" name ="title"><br>
 Company: <input type = "text" name="company"><br>
 StartDate:<input type ="date" name ="sDate"><br>

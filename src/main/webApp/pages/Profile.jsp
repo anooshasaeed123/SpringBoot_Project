@@ -7,6 +7,13 @@
 <title>Profile</title>
 </head>
 <body>
+<h1>Profile Information</h1>
+<h2>Work Information</h2>
+
+ Company: ${company} <br>
+Title:   ${title} <br>
+Start Date: ${sDate }<br>
+End Date:  ${eDate} <br>
 
 </body>
 </html>
